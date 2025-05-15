@@ -28,5 +28,9 @@ Route::get('/products/{id?}', function ($id = null){
 });
 
 Route::match(['get', 'post'], '/students', function (Request $req) {
-    return 'Requested method is' . $req->method();
+    return 'Requested method is ' . $req->method();
+});
+
+Route::any('/posts', function(Request $req) {
+    return 'Requested method is ' . $req->method();
 });
