@@ -18,6 +18,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/user', function () {
-    return "Hi Users";
+Route::get('/users/{name?}', function ($name = null) {
+    return "Hi {$name}!";
+});
+
+
+Route::get('/products/{id?}', function ($id = null){
+    return "Product id is " . $id;
+});
+
+Route::match(['get', 'post'], '/students', function (Request $req) {
+    return 'Requested method is' . $req->method();
 });
