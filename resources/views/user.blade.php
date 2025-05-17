@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>User View</h1>
+<h2>User Name {{$name}}</h2>
 </body>
 </html>
