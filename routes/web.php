@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home/{name?}/',[HomeController::class, 'index']);
+
+Route::get('/user', function () {
+    return View('user');
+});
