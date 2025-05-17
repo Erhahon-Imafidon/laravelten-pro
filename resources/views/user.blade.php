@@ -15,5 +15,8 @@
 <body>
    <h1>User View</h1>
    <h2>User Name {{ $name }}</h2>
+ <p>Name: {{$users['fullname']}}</p>
+ <p>Email: {{$users['email']}}</p>
+ <p>Phone: {{$users['phone']}}</p>
 </body>
 </html>
