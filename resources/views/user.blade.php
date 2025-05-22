@@ -13,7 +13,7 @@
    <title>User</title>
 </head>
 <body>
-<x-header name="Erhahon Imafidon" />
+
 <div>
    <h1>User View</h1>
    <h2>User Name {{ $name }}</h2>
