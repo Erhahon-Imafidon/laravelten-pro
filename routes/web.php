@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FluentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -32,3 +33,5 @@ Route::get('/add-post', [ClientController::class, 'addPost'])->name('posts.addpo
 Route::get('/update-post', [ClientController::class, 'updatePost'])->name('posts.updatepost');
 
 Route::get('/delete-post/{id}', [ClientController::class, 'deletePost'])->name('posts.deletepost');
+
+Route::get('/fluent-strings', [FluentController::class, 'index'])->name('fluent.index');
