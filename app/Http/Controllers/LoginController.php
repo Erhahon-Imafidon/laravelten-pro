@@ -10,4 +10,9 @@ class LoginController extends Controller
     {
         return view('login');
     }
+
+    public function loginSubmit()
+    {
+        return "Form Submitted";
+    }
 }

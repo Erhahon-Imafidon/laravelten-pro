@@ -38,3 +38,5 @@ Route::get('/delete-post/{id}', [ClientController::class, 'deletePost'])->name('
 Route::get('/fluent-strings', [FluentController::class, 'index'])->name('fluent.index');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+
+Route::post('/login', [LoginController::class, 'loginSubmit'])->name('login.submit');

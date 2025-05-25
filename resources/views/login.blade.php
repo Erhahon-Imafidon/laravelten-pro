@@ -24,7 +24,8 @@
                </div>
                
 {{--               Form--}}
-               <form class="p-6 flex flex-col gap-4">
+               <form method="POST" action="{{route('login.submit')}}" class="p-6 flex flex-col gap-4">
+                  @csrf
                   <div class="flex flex-col gap-2">
                      <label for="email">Email Address</label>
                      <input type="email" id="email" name="email" class="border border-gray-300 rounded p-2">
