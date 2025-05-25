@@ -13,6 +13,8 @@ class LoginController extends Controller
 
     public function loginSubmit(Request $request)
     {
-        return $request->all();
+        $email = $request->input('email');
+        $password = $request->input('password');
+        return "Email: ". $email . ", Password: " . $password;
     }
 }
