@@ -11,8 +11,8 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function loginSubmit()
+    public function loginSubmit(Request $request)
     {
-        return "Form Submitted";
+        return $request->all();
     }
 }
