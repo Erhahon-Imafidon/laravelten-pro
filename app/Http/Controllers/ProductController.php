@@ -9,6 +9,6 @@ class ProductController extends Controller
     public function index()
     {
         $fruits = array('Apple', 'Banana', 'Orange', 'Mango', 'Pineapple');
-        return view('welcome', compact('fruits'));
+        return view('welcome',  compact('fruits'));
     }
 }
