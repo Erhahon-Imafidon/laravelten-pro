@@ -58,3 +58,7 @@ Route::post('/add-post', [PostController::class, 'addPostSubmit'])->name('posts.
 Route::get('/posts/{id}', [PostController::class, 'getPostById'])->name('posts.getpostbyid');
 
 Route::get('/delete-post/{id}', [PostController::class, 'deletePost'])->name('posts.delete');
+
+Route::get('/edit-post/{id}', [PostController::class, 'editPost'])->name('posts.edit');
+
+Route::post('/edit-post/{id}', [PostController::class, 'editPostSubmit'])->name('posts.editsubmit');
