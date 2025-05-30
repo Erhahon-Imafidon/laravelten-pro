@@ -12,4 +12,9 @@ class PostController extends Controller
         $posts = DB::table('posts')->get();
         return view('posts', compact('posts'));
     }
+
+    public function addPost()
+    {
+        return view('add-post');
+    }
 }
