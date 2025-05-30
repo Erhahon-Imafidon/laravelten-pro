@@ -20,6 +20,7 @@
                         <tr>
                             <th class="p-4 border-b border-gray-300">Post Title</th>
                             <th class="p-4 border-b border-gray-300">Post Body</th>
+                            <th class="p-4 border-b border-gray-300">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,6 +28,9 @@
                             <tr>
                                 <td class="border-b border-gray-300 p-4">{{ $post->title }}</td>
                                 <td class="border-b border-gray-300 p-4">{{ $post->body }}</td>
+                                <td class="border-b border-gray-300 p-4">
+                                    <a href="/posts/{{ $post->id }}" class="text-white px-4 py-2 rounded bg-green-400">View</a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

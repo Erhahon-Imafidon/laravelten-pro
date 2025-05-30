@@ -29,7 +29,8 @@ class PostController extends Controller
 
     public function getPostById($id)
     {
-        $post = DB::table('post')->where('id', $id)->first();
+        $post = DB::table('posts')->where('id', $id)->first();
+        $post = $post ?: null; // Null check to handle a case where post is not found
         return view('single-post', compact('post'));
     }
 }
