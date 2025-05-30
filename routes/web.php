@@ -52,3 +52,5 @@ Route::get('/session/remove', [SessionController::class, 'deleteSessionData'])->
 Route::get('/posts', [PostController::class, 'getAllPosts'])->name('posts.getallpost');
 
 Route::get('/add-post', [PostController::class, 'addPost'])->name('posts.add');
+
+Route::post('/add-post', [PostController::class, 'addPostSubmit'])->name('posts.addsubmit');
