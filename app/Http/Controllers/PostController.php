@@ -26,4 +26,10 @@ class PostController extends Controller
     ]);
         return back()->with('post_created', 'Post created successfully!');
     }
+
+    public function getPostById($id)
+    {
+        $post = DB::table('post')->where('id', $id)->first();
+        return view('single-post', compact('post'));
+    }
 }
