@@ -12,15 +12,16 @@
     <section class="container">
         <div class="w-1/2 rounded-lg border border-gray-300">
             <div class="border-b border-b-gray-300 bg-gray-200 px-6 py-4 text-xl font-medium">
-                <h1 class="text-2xl">Update Post</h1>
+                <h1 class="text-2xl">Edit Post</h1>
             </div>
             @if(Session::has('post_updated'))
                 <div role="alert" class="mx-6 mt-4 bg-green-200 border border-green-300 p-4 rounded-lg">
                     {{Session::get('post_updated')}}
                 </div>
             @endif
-            <form method="POST" action="{{route('posts.editsubmit', $post->id)}}" class="flex flex-col gap-4 p-6" >
+            <form method="POST" action="{{route('posts.update', $post->id)}}" class="flex flex-col gap-4 p-6" >
                 @csrf
+                <input type="hidden" name="id" value="{{$post->id}}">
                 <div class="flex flex-col gap-2">
                     <label for="title" class="text-xl">Post Title</label>
                     <input type="text" id="title" name="title" value="{{$post->title}}" class="rounded border border-gray-300 p-2 focus:outline-none">

@@ -26,8 +26,8 @@
                             <th class="p-4 border-b border-gray-300">Post Title</th>
                             <th class="p-4 border-b border-gray-300">Post Body</th>
                             <th class="p-4 border-b border-gray-300">Action</th>
-                            <th class="p-4 border-b border-gray-300">Delete Post</th>
                             <th class="p-4 border-b border-gray-300">Edit Post</th>
+                            <th class="p-4 border-b border-gray-300">Delete Post</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,11 +38,12 @@
                                 <td class="border-b border-gray-300 p-4">
                                     <a href="/posts/{{ $post->id }}" class="text-white px-4 py-2 rounded bg-green-400">View</a>
                                 </td>
+
                                 <td class="border-b border-gray-300 p-4">
-                                    <a href="/delete-post/{{ $post->id }}" class="text-white px-4 py-2 rounded bg-red-400">Delete</a>
+                                    <a href="/edit-post/{{ $post->id }}" class="text-white px-4 py-2 rounded bg-blue-400">Edit</a>
                                 </td>
                                 <td class="border-b border-gray-300 p-4">
-                                    <a href="/edit-post/{{ $post->id }}" class="text-white px-4 py-2 rounded bg-green-400">Edit</a>
+                                    <a href="/delete-post/{{ $post->id }}" class="text-white px-4 py-2 rounded bg-red-400">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

@@ -46,9 +46,9 @@ class PostController extends Controller
         return view('edit-post', compact('post'));
     }
 
-    public function editPostSubmit(Request $request, $id)
+     public function editPostSubmit(Request $request)
     {
-        DB::table('posts')->where('id', $id)->update([
+        DB::table('posts')->where('id', $request->id)->update([
             'title' => $request->title,
             'body' => $request->body,
         ]);
