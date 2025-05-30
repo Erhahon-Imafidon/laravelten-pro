@@ -17,5 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-changelog.md
-custom-instructions.md
+/changelog.md
+/custom-instructions.md
