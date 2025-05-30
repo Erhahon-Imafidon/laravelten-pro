@@ -33,4 +33,10 @@ class PostController extends Controller
         $post = $post ?: null; // Null check to handle a case where post is not found
         return view('single-post', compact('post'));
     }
+
+    public function deletePost($id)
+    {
+        DB::table('posts')->where('id', $id)->delete();
+        return back()->with('post_deleted', 'Post deleted successfully!');
+    }
 }
