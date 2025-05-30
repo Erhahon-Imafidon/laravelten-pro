@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,3 +48,5 @@ Route::get('/session/get', [SessionController::class, 'getSessionData'])->name('
 Route::get('/session/set', [SessionController::class, 'storeSessionData'])->name('session.set');
 
 Route::get('/session/remove', [SessionController::class, 'deleteSessionData'])->name('session.delete');
+
+Route::get('/posts', [PostController::class, 'getAllPosts'])->name('posts.getallpost');
