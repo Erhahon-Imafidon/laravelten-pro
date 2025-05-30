@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     <title>Add Posts: Database CRUD operations</title>
 </head>
-<body>
+<body class="font-figtree">
 <main class="py-8">
     <section class="container">
         <div class="w-1/2 rounded-lg border border-gray-300">
@@ -15,7 +15,7 @@
                 <h1 class="text-2xl">Add New Post</h1>
             </div>
             @if(Session::has('post_created'))
-                <div role="alert" class="ml-5">
+                <div role="alert" class="mx-6 mt-4 bg-green-200 border border-green-300 p-4 rounded-lg">
                     {{Session::get('post_created')}}
                 </div>
             @endif
