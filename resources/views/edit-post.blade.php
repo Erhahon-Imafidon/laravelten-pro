@@ -19,7 +19,7 @@
                     {{Session::get('post_updated')}}
                 </div>
             @endif
-            <form method="POST" action="{{route('posts.update', $post->id)}}" class="flex flex-col gap-4 p-6" >
+            <form method="POST" action="{{route('posts.update')}}" class="flex flex-col gap-4 p-6" >
                 @csrf
                 <input type="hidden" name="id" value="{{$post->id}}">
                 <div class="flex flex-col gap-2">
