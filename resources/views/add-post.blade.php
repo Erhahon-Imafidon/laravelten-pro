@@ -7,25 +7,30 @@
     @vite('resources/css/app.css')
     <title>Add Posts: Database CRUD operations</title>
 </head>
-<body>
+<body class="font-figtree">
 <main class="py-8">
     <section class="container">
-        <div>
+        <div class="w-1/2 rounded-lg border border-gray-300">
             <div class="border-b border-b-gray-300 bg-gray-200 px-6 py-4 text-xl font-medium">
-                <h1>Add New Post</h1>
+                <h1 class="text-2xl">Add New Post</h1>
             </div>
-        <form action="">
+            @if(Session::has('post_created'))
+                <div role="alert" class="mx-6 mt-4 bg-green-200 border border-green-300 p-4 rounded-lg">
+                    {{Session::get('post_created')}}
+                </div>
+            @endif
+        <form method="POST" action="{{route('posts.addsubmit')}}" class="flex flex-col gap-4 p-6" >
             @csrf
-            <div>
-                <label for="title">Post Title</label>
-                <input type="text" id="title" name="title">
+            <div class="flex flex-col gap-2">
+                <label for="title" class="text-xl">Post Title</label>
+                <input type="text" id="title" name="title" class="rounded border border-gray-300 p-2 focus:outline-none">
             </div>
 
-            <div>
-                <label for="body">Post Body</label>
-                <textarea id="body" name="body" rows="3"></textarea>
+            <div class="flex flex-col gap-2">
+                <label for="body" class="text-xl">Post Body</label>
+                <textarea id="body" name="body" rows="3" class="rounded border border-gray-300 p-2 focus:outline-none"></textarea>
             </div>
-            <button type="submit" class="cursor-pointer">Submit</button>
+            <button type="submit" class="cursor-pointer w-20 rounded bg-green-600 py-2 text-white">Submit</button>
         </form>
         </div>
     </section>
