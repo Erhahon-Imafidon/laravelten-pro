@@ -66,3 +66,5 @@ Route::post('/update-post', [PostController::class, 'editPostSubmit'])->name('po
 Route::get('/inner-join', [PostController::class, 'innerJoinClause'])->name('posts.innerjoin');
 
 Route::get('/left-join', [PostController::class, 'leftJoinClause'])->name('posts.leftjoin');
+
+Route::get('/right-join', [PostController::class, 'rightJoinClause'])->name('posts.rightjoin');
