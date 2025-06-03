@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -79,4 +80,11 @@ class PostController extends Controller
             ->get();
         return $result;
     }
+
+    public function getAllPostsUsingModel()
+    {
+        $posts = Post::all();
+        return $posts;
+    }
+
 }
